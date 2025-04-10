@@ -11,7 +11,7 @@ class Api {
         try {
             const response = await fetch(`${this.baseUrl}/${endpoint}`);
             if (!response.ok) {
-                throw new Error(`Ошибка запроса: ${response.status}`);
+                throw new Error(`Помилка запиту: ${response.status}`);
             }
             return await response.json();
         } catch (error) {
@@ -30,7 +30,7 @@ class Api {
                 body: JSON.stringify(data),
             });
             if (!response.ok) {
-                throw new Error(`Ошибка запроса: ${response.status}`);
+                throw new Error(`Помилка запиту: ${response.status}`);
             }
             return await response.json();
         } catch (error) {

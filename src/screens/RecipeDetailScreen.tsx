@@ -15,7 +15,7 @@ const RecipeDetailScreen = () => {
     if (!recipe) {
         return (
             <View style={styles.container}>
-                <Text style={styles.errorText}>Рецепт не найден</Text>
+                <Text style={styles.errorText}>Рецепт не знайдено</Text>
             </View>
         );
     }
@@ -24,20 +24,20 @@ const RecipeDetailScreen = () => {
         <ScrollView style={styles.container}>
             <Image source={{ uri: recipe.image }} style={styles.image} />
             <Text style={styles.title}>{recipe.title}</Text>
-            <Text style={styles.time}>⏱ {recipe.time} минут</Text>
+            <Text style={styles.time}>⏱ {recipe.time} хвилин</Text>
 
-            <Text style={styles.sectionTitle}>Ингредиенты</Text>
+            <Text style={styles.sectionTitle}>Інгредієнти</Text>
             {recipe.ingredients.map((ingredient, index) => (
                 <Text key={index} style={styles.ingredient}>• {ingredient}</Text>
             ))}
 
-            <Text style={styles.sectionTitle}>Описание</Text>
+            <Text style={styles.sectionTitle}>Опис</Text>
             <Text style={styles.description}>
                 Пока тут заглушка. Здесь будет описание приготовления блюда, которое мы позже получим из API или расширим mock.
             </Text>
 
             <TouchableOpacity style={styles.favoriteButton}>
-                <Text style={styles.favoriteText}>❤️ В избранное</Text>
+                <Text style={styles.favoriteText}>❤️ В обране</Text>
             </TouchableOpacity>
         </ScrollView>
     );

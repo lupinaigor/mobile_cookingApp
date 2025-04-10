@@ -30,13 +30,13 @@ const RecipeListScreen = () => {
         <TouchableOpacity style={styles.card} onPress={() => handleRecipePress(item.id)}>
             <Image source={{ uri: item.image }} style={styles.image} />
             <Text style={styles.title}>{item.title}</Text>
-            <Text style={styles.time}>{item.time} мин</Text>
+            <Text style={styles.time}>{item.time} хвилин</Text>
         </TouchableOpacity>
     );
 
     return (
         <View style={styles.container}>
-            <Text style={styles.header}>Найденные рецепты</Text>
+            <Text style={styles.header}>Знайдені рецепти</Text>
             <FlatList
                 data={filteredRecipes}
                 renderItem={renderItem}

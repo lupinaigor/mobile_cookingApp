@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../navigation/types'; // ✅ типы
+import { RootStackParamList } from '../navigation/types';
 
 type IngredientsScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Ingredients'>;
 
@@ -17,20 +17,20 @@ const IngredientsScreen = () => {
             .map(item => item.trim())
             .filter(item => item.length > 0);
 
-        navigation.navigate('Recipes', { selectedIngredients }); // ✅ передаём параметры
+        navigation.navigate('Recipes', { selectedIngredients });
     };
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Введите ингредиенты</Text>
+            <Text style={styles.title}>Введіть інгредієнти</Text>
             <TextInput
                 style={styles.input}
-                placeholder="например: курица, рис, чеснок"
+                placeholder="наприклад: курятина, рис, часник"
                 value={inputText}
                 onChangeText={setInputText}
             />
             <TouchableOpacity style={styles.button} onPress={handleFindRecipes}>
-                <Text style={styles.buttonText}>Найти рецепты</Text>
+                <Text style={styles.buttonText}>Знайти рецепти</Text>
             </TouchableOpacity>
         </View>
     );

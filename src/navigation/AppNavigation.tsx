@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { RootStackParamList } from './types'; // 👈 убедись в правильном пути
+import { RootStackParamList } from './types';
 import HomeScreen from '../screens/HomeScreen';
 import IngredientsScreen from '../screens/IngredientsScreen';
 import RecipeListScreen from '../screens/RecipeListScreen';
 import RecipeDetailScreen from '../screens/RecipeDetailScreen';
 
-// 👇 используем типизированный Stack
+
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const AppNavigation = () => {

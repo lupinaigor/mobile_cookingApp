@@ -2,33 +2,33 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../navigation/types'; // ✅
+import { RootStackParamList } from '../navigation/types';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Home'>;
 const HomeScreen = () => {
     const navigation = useNavigation<HomeScreenNavigationProp>();
 
     const handleSelectIngredients = () => {
-        navigation.navigate('Ingredients'); // ✅ теперь ошибок не будет
+        navigation.navigate('Ingredients');
     };
 
     return (
         <ScrollView style={styles.container}>
-            <Text style={styles.title}>Добро пожаловать 👋</Text>
-            <Text style={styles.subtitle}>Что вы хотите приготовить сегодня?</Text>
+            <Text style={styles.title}>Вітаю! 👋</Text>
+            <Text style={styles.subtitle}>Що бажаєте приготувати сьогодні?</Text>
 
             <TouchableOpacity style={styles.button} onPress={handleSelectIngredients}>
-                <Text style={styles.buttonText}>Выбрать ингредиенты</Text>
+                <Text style={styles.buttonText}>Вибрати інгредієнти</Text>
             </TouchableOpacity>
 
-            <Text style={styles.sectionTitle}>Популярные рецепты</Text>
+            <Text style={styles.sectionTitle}>Популярні рецепти</Text>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
                 <View style={styles.card}>
                     <Image
                         source={{ uri: 'https://www.themealdb.com/images/media/meals/llcbn01574260722.jpg' }}
                         style={styles.image}
                     />
-                    <Text style={styles.cardTitle}>Паста с соусом</Text>
+                    <Text style={styles.cardTitle}>Паста з соусом</Text>
                 </View>
                 <View style={styles.card}>
                     <Image
