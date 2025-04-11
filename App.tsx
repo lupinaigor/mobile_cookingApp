@@ -28,7 +28,7 @@ const App = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator initialRouteName="Home">
-                <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Кулінарний помічник' }} />
+                <Stack.Screen name="Home" component={HomeScreen} options={{ title: '               Кулінарний помічник' }} />
                 <Stack.Screen name="Ingredients" component={IngredientsScreen} options={{ title: 'Інгредієнти' }} />
                 <Stack.Screen name="Recipes" component={RecipeListScreen} options={{ title: 'Рецепти' }} />
                 <Stack.Screen name="RecipeDetail" component={RecipeDetailScreen} options={{ title: 'Деталі рецепта' }} />

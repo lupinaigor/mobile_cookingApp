@@ -25,7 +25,7 @@ const IngredientsScreen = () => {
             <Text style={styles.title}>Введіть інгредієнти</Text>
             <TextInput
                 style={styles.input}
-                placeholder="наприклад: курятина, рис, часник"
+                placeholder="наприклад: курятина, рис, картопля"
                 value={inputText}
                 onChangeText={setInputText}
             />

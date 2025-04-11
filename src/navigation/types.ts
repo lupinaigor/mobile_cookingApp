@@ -4,3 +4,5 @@ export type RootStackParamList = {
     Recipes: { selectedIngredients: string[] };
     RecipeDetail: { recipeId: number };
 };
+
+

@@ -33,7 +33,7 @@ const RecipeDetailScreen = () => {
 
             <Text style={styles.sectionTitle}>Опис</Text>
             <Text style={styles.description}>
-                Пока тут заглушка. Здесь будет описание приготовления блюда, которое мы позже получим из API или расширим mock.
+                Треба підключати API
             </Text>
 
             <TouchableOpacity style={styles.favoriteButton}>
