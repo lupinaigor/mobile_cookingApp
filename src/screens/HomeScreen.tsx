@@ -35,7 +35,7 @@ const HomeScreen = () => {
                         source={{ uri: 'https://www.themealdb.com/images/media/meals/1529444830.jpg' }}
                         style={styles.image}
                     />
-                    <Text style={styles.cardTitle}>Салат Цезарь</Text>
+                    <Text style={styles.cardTitle}>Салат Цезар</Text>
                 </View>
             </ScrollView>
         </ScrollView>

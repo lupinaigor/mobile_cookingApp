@@ -1,4 +1,4 @@
-const BASE_URL = 'https://your-api-url.com/api'; // ← замени на реальный URL API
+const BASE_URL = 'https://your-api-url.com/api'; // ← замінити на реальний URL API
 
 
 class Api {
@@ -12,7 +12,7 @@ class Api {
         try {
             const response = await fetch(`${this.baseUrl}/${endpoint}`);
             if (!response.ok) {
-                throw new Error(`Ошибка запроса: ${response.status}`);
+                throw new Error(`Помилка запиту: ${response.status}`);
             }
             return await response.json();
         } catch (error) {
